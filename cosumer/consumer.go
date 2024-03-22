@@ -22,10 +22,10 @@ func main() {
 	}
 	defer conn.Close()
 
-	consumer(conn)
+	Consumer(conn)
 }
 
-func consumer(conn *amqp.Connection) {
+func Consumer(conn *amqp.Connection) {
 	// consumer.go
 	ch, err := conn.Channel()
 	if err != nil {
